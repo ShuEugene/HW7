@@ -6,11 +6,16 @@ public class Main {
 //  ДЗ 7.1
         String firstName = "Ivan", middleName = "Ivanovich", lastName = "Ivanov";
         String fullName = getFullName(firstName, middleName, lastName);
-        System.out.println(fullName);
+        System.out.println(fullName + "\n");
 
 //  ДЗ 7.2
         String fullNameUC = getUpperCase(fullName);
-        System.out.println(fullNameUC);
+        System.out.println(fullNameUC + "\n");
+
+//  ДЗ 7.3
+        fullName = "Иванов Семён Семёнович";
+        String fullNameCorrected = fullName.replace('ё', 'е');
+        System.out.println(fullNameCorrected + "\n");
 
         System.out.println();
     }
