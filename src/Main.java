@@ -1,13 +1,15 @@
 //  Домашние задания к Уроку 7 «Строки»
 public class Main {
     public static void main(String[] args) {
-        hw7_1();
+        System.out.println();
 
+//  ДЗ 7.1
+        System.out.println(getFullName("Ivan", "Ivanovich", "Ivanov"));
+
+        System.out.println();
     }
 
-    static void hw7_1() {
-        String firstName = "Ivan", middleName = "Ivanovich", lastName = "Ivanov",
-                fullName = lastName + " " + firstName + " " + middleName;
-        System.out.println(fullName);
+    static String getFullName(String firstName, String middleName, String lastName) {
+                return lastName + " " + firstName + " " + middleName;
     }
 }
