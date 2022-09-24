@@ -8,7 +8,17 @@ public class Main {
         String fullName = getFullName(firstName, middleName, lastName);
         System.out.println(fullName);
 
+//  ДЗ 7.2
+        String fullNameUC = getUpperCase(fullName);
+        System.out.println(fullNameUC);
+
         System.out.println();
+    }
+
+    static String getUpperCase(String str){
+        if (str.length() > 0) {
+            return str.toUpperCase();
+        } else throw new RuntimeException("Нечего преобразовывать.");
     }
 
     static String getFullName(String firstName, String middleName, String lastName) {
