@@ -4,12 +4,20 @@ public class Main {
         System.out.println();
 
 //  ДЗ 7.1
-        System.out.println(getFullName("Ivan", "Ivanovich", "Ivanov"));
+        String firstName = "Ivan", middleName = "Ivanovich", lastName = "Ivanov";
+        String fullName = getFullName(firstName, middleName, lastName);
+        System.out.println(fullName);
 
         System.out.println();
     }
 
     static String getFullName(String firstName, String middleName, String lastName) {
-                return lastName + " " + firstName + " " + middleName;
+        if (lastName.length() == 0 || firstName.length() == 0) {
+            throw new RuntimeException("Отсутствуют сведения об имени и/или фамилии.");
+        } else if (middleName.length() > 0){
+            return lastName + " " + firstName + " " + middleName;
+        } else {
+            return lastName + " " + firstName;
+        }
     }
 }
